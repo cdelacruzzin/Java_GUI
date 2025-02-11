@@ -19,12 +19,7 @@ public class TextAreaDemo extends JFrame{
         t1 = new JTextArea(s, 10, 15);
         b.add(new JScrollPane(t1));
         copy = new JButton("Copy >>>");
-        copy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                t2.setText(t1.getText());
-            }
-        });
+        copy.addActionListener(new CopyHandler());
         b.add(copy);
         t2 = new JTextArea(10, 15);
         t2.setEditable(false);
@@ -33,10 +28,10 @@ public class TextAreaDemo extends JFrame{
         c.add(b);
         setVisible(true);
     }
-//    class CopyHandler implements ActionListener{
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            t2.setText(t1.getSelectedText());
-//        }
-//    }
+    class CopyHandler implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            t2.setText(t1.getText());
+        }
+    }
 }
