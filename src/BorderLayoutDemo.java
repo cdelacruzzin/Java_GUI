@@ -40,7 +40,6 @@ public class BorderLayoutDemo extends JFrame implements ActionListener{
                 buttons[i].setVisible(false);
             else
                 buttons[i].setVisible(true);
-
         }
     }
 }
