@@ -53,7 +53,7 @@ public class Game extends JFrame implements ActionListener{
     }
 
     public void setResponse(ActionEvent e){
-        if (txtField.getText().equalsIgnoreCase(txtField.getText())) {
+        if (txtField.getText().equalsIgnoreCase(ans)) {
             txtField.setText("You Got It!!");
         } else {
             txtField.setText("Incorrect! Try Again!");
